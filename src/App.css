@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -35,4 +36,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  margin: 0;
+}
+
+body[data-theme='light'] {
+  background-color: white;
+}
+
+body[data-theme='dark'] {
+  background-color: black;
+}
+
+.Header {
+  display: flex;
 }

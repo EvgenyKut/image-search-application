@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.lightTheme {
+  display: none;
+}
+
+.darkTheme {
+  display: none;
+}
+
+body[data-theme='light'] .lightTheme {
+  display: block;
+}
+
+body[data-theme='dark'] .darkTheme {
+  display: block;
+}

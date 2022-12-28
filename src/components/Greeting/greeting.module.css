@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  font-size: 20px;
+}
+
+.lightTheme {
+  display: none;
+}
+
+.darkTheme {
+  display: none;
+}
+
+body[data-theme='light'] .lightTheme {
+  display: block;
+}
+
+body[data-theme='dark'] .darkTheme {
+  display: block;
+}

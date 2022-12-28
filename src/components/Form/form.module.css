@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+body[data-theme='dark'] .wrapper {
+  background-color: beige !important;
+  border-radius: 8px;
+}

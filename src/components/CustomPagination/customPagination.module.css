@@ -1,0 +1,11 @@
+body[data-theme='dark'] .wrapper {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: beige !important;
+  border-radius: 8px;
+}
+
+body[data-theme='light'] .wrapper {
+  margin-top: 1rem;
+  padding: 0.5rem;
+}

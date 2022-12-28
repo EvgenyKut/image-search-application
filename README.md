@@ -44,3 +44,31 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+Ideas
+
+<!-- Add css theme-provider -->
+
+<!-- Add local-time greeting and theme-provider -->
+
+<!-- Add random first images -->
+
+<!-- Add loading -->
+
+<!-- Add login store -->
+
+<!-- Add routing -->
+
+Add error-boundaries
+
+Add modal-window on second-page (onboarding)
+
+<!-- add <Notification /> -->
+
+add possibility to share link for another users
+
+Fix button sizes
+
+Add dictionary
+
+<!-- add sorting images by like on the page -->
