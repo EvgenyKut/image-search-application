@@ -1,20 +1,21 @@
 import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import { useAppSelector, useLocalStorageState } from '../hooks';
+import { useAppDispatch } from '../hooks';
 import { Header, ThemeToggler } from '../components';
+import { addName } from '../store/reducers/AuthSlice';
 
 const Layout = () => {
-  const [, setIsAuthData] = useLocalStorageState('search-app-auth', {
-    auth: false,
-    name: '',
-  });
-  const { isAuth, name } = useAppSelector((state) => state.authReducer);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (isAuth) {
-      setIsAuthData({ auth: isAuth, name: name });
+    const data = localStorage.getItem('search-app-name');
+    if (data) {
+      const name = JSON.parse(data);
+      if (name) {
+        dispatch(addName({ name: name }));
+      }
     }
-  }, [isAuth, name, setIsAuthData]);
+  }, [dispatch]);
 
   return (
     <>

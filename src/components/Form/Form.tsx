@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { SyntheticEvent } from 'react';
 import { useKeyListener } from '../../hooks';
 
 import styles from './form.module.css';
 
 type FormProps = {
-  onSubmit: () => void;
+  onSubmit: (e: SyntheticEvent) => void;
   children: React.ReactNode;
 };
 

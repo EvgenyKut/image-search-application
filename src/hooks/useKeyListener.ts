@@ -1,10 +1,6 @@
 import { useEffect } from 'react';
 
-const useKeyListener = (
-  key: string,
-  callback: () => void,
-  disableFlag?: boolean,
-) => {
+const useKeyListener = (key: string, callback: any, disableFlag?: boolean) => {
   useEffect(() => {
     if (disableFlag) return;
     const listener = (event: any) => {

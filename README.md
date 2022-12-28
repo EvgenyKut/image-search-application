@@ -61,14 +61,23 @@ Ideas
 
 Add error-boundaries
 
-Add modal-window on second-page (onboarding)
-
 <!-- add <Notification /> -->
-
-add possibility to share link for another users
 
 Fix button sizes
 
 Add dictionary
 
 <!-- add sorting images by like on the page -->
+
+You can switch on light/dark theme by click on icon or press on
+"F"{' '}
+
+</li>
+<li>Use "Enter" for confirmation search your images</li>
+<li>
+For pagination you can use click by buttons or by left/right
+arrows on keyboard
+</li>
+<li>
+If you will refresh the app, we will save your name, theme and
+authorization.

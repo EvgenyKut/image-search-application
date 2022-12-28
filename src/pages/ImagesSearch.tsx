@@ -7,7 +7,6 @@ import { IImage } from '../models/IImage';
 import Spinner from '../components/Spinner';
 import useGetImages from '../hooks/useGetImages';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
-import ModalOpen from '../components/ModalOnboarding';
 import { CustomPagination, Input, Image, Form, Container } from '../components';
 
 const ImagesSearch = () => {
@@ -44,7 +43,6 @@ const ImagesSearch = () => {
               Search
             </Button>
           </Form>
-          {/* <ModalOpen /> */}
           <Box style={{ minHeight: '630px', marginTop: '1rem' }}>
             <Grid
               container

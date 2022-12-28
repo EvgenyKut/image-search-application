@@ -15,11 +15,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
   const logoutHandler = () => {
     dispatch(resetName());
     navigate('/');
-
-    window.localStorage.setItem(
-      'search-app-auth',
-      JSON.stringify({ auth: false, name: '' }),
-    );
+    localStorage.removeItem('search-app-name');
   };
 
   return (

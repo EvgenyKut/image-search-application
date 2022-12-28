@@ -3,8 +3,8 @@ import './App.css';
 
 import AppProvider from './providers/AppProvider';
 
-function App() {
+const App = () => {
   return <AppProvider />;
-}
+};
 
 export default App;
