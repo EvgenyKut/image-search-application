@@ -2,9 +2,6 @@
 
 exports[`Greeting-component render test should have snapshot 1`] = `
 <div
-  className="wrapper"
-  data-testid="greeting"
->
-  Good afternoon, Evgeny!
-</div>
+  className="container"
+/>
 `;

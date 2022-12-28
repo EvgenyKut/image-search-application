@@ -13,7 +13,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [name, setName] = useState('');
 
-  useUpdateStore('/images');
+  // useUpdateStore('/images');
 
   const handler = () => {
     dispatch(addName({ name: name }));

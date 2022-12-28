@@ -6,7 +6,7 @@ import NotFound from '../assets/404.gif';
 
 const Error = () => {
   const navigate = useNavigate();
-  useUpdateStore();
+  // useUpdateStore();
 
   return (
     <Container>
