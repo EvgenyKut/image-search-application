@@ -5,6 +5,7 @@ import { Greeting } from '../../components';
 import style from './header.module.css';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { resetName } from '../../store/reducers/AuthSlice';
+import { Dictionary } from '../../constants/dictionary';
 
 type HeaderProps = { children: React.ReactNode };
 const Header: React.FC<HeaderProps> = ({ children }) => {
@@ -31,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
           color="primary"
           type="button"
         >
-          Logout
+          {Dictionary.LOGOUT}
         </Button>
       )}
     </div>

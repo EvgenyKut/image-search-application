@@ -82,7 +82,7 @@ exports[`Login render test snapshot 1`] = `
       tabIndex={0}
       type="submit"
     >
-      Log in
+      LOG IN
     </button>
   </div>
 </div>

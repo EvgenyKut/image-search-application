@@ -2,8 +2,9 @@ import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import Login from './Login';
 import { useNavigate } from 'react-router-dom';
-import StateProvider from '../providers/StateProvider';
 import * as reactRedux from 'react-redux';
+import { Dictionary } from '../constants/dictionary';
+import { Routes } from '../constants/routes';
 
 jest.mock('react-router-dom', () => ({
   useNavigate: jest.fn(() => jest.fn),
@@ -65,9 +66,9 @@ describe('Login render test', () => {
     expect(label.textContent?.slice(0, -2)).toBe('Username');
 
     const button = screen.getByRole('button');
-    expect(button.textContent).toBe('Log in');
+    expect(button.textContent).toBe(Dictionary.LOGIN_BTN);
 
     fireEvent.click(button);
-    expect(navigate).toHaveBeenLastCalledWith('/images');
+    expect(navigate).toHaveBeenLastCalledWith(Routes.IMAGES);
   });
 });

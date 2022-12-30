@@ -3,10 +3,11 @@ import React, { SyntheticEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form, Input, Container } from '../components';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
-
 import { addName } from '../store/reducers/AuthSlice';
 import { setSuccessNotification } from '../store/reducers/NotificationsSlice';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
+import { Dictionary } from '../constants/dictionary';
+import { Routes } from '../constants/routes';
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -21,12 +22,12 @@ const Login = () => {
     dispatch(addName({ name: name }));
     dispatch(onBlur());
     dispatch(setSuccessNotification(`Welcome, ${name}!`));
-    navigate('/images');
+    navigate(Routes.IMAGES);
   };
 
   useEffect(() => {
     if (isAuth) {
-      navigate('/images');
+      navigate(Routes.IMAGES);
     }
   }, [isAuth, navigate]);
 
@@ -38,7 +39,7 @@ const Login = () => {
           onChange={(e: SyntheticEvent) =>
             setName((e.target as HTMLTextAreaElement).value)
           }
-          label="Username"
+          label={Dictionary.USERNAME_LABEL}
         />
         <Button
           onClick={handler}
@@ -46,7 +47,7 @@ const Login = () => {
           color="primary"
           type="submit"
         >
-          Log in
+          {Dictionary.LOGIN_BTN}
         </Button>
       </Form>
     </Container>

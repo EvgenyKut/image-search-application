@@ -65,7 +65,7 @@ Add error-boundaries
 
 Fix button sizes
 
-Add dictionary
+<!-- Add dictionary -->
 
 <!-- add sorting images by like on the page -->
 

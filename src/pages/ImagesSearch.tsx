@@ -14,6 +14,7 @@ import {
   Form,
   Container,
 } from '../components';
+import { Dictionary } from '../constants/dictionary';
 
 const ImagesSearch = () => {
   const dispatch = useAppDispatch();
@@ -38,7 +39,7 @@ const ImagesSearch = () => {
             <Input
               value={inputValue}
               onChange={(e: any) => setInputValue(e.target.value)}
-              label="Search"
+              label={Dictionary.SEARCH_BTN}
             />
             <Button
               onClick={handleSubmit}
@@ -46,7 +47,7 @@ const ImagesSearch = () => {
               color="primary"
               type="submit"
             >
-              Search
+              {Dictionary.SEARCH_BTN}
             </Button>
           </Form>
           <Box style={{ minHeight: '630px', marginTop: '1rem' }}>
