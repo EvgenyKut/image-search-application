@@ -44,6 +44,7 @@ const CustomPagination: React.FC<PaginationProps> = ({ totalPages, page }) => {
       className={styles.wrapper}
       siblingCount={0}
       tabIndex={0}
+      data-testid="pagination"
     />
   );
 };

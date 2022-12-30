@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PrivateRoute from '../components/PrivateRoute';
+import AuthRoute from '../components/AuthRoute';
 import Error from '../pages/Error';
 import ImagesSearch from '../pages/ImagesSearch';
 import Layout from '../pages/Layout';
@@ -13,9 +13,9 @@ const RouterProvider = () => (
         <Route
           path="/images"
           element={
-            <PrivateRoute>
+            <AuthRoute>
               <ImagesSearch />
-            </PrivateRoute>
+            </AuthRoute>
           }
         />
         <Route path="*" element={<Error />} />

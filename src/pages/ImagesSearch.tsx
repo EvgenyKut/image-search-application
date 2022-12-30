@@ -7,7 +7,13 @@ import { IImage } from '../models/IImage';
 import Spinner from '../components/Spinner';
 import useGetImages from '../hooks/useGetImages';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
-import { CustomPagination, Input, Image, Form, Container } from '../components';
+import {
+  CustomPagination,
+  Input,
+  ImageCard,
+  Form,
+  Container,
+} from '../components';
 
 const ImagesSearch = () => {
   const dispatch = useAppDispatch();
@@ -53,7 +59,7 @@ const ImagesSearch = () => {
             >
               {imagesData.map((image: IImage) => (
                 <Grid item xs="auto" sm="auto" md="auto" key={image.id}>
-                  <Image url={image.url} alt={image.alt} />
+                  <ImageCard url={image.url} alt={image.alt} />
                 </Grid>
               ))}
             </Grid>

@@ -19,9 +19,17 @@ const ThemeToggler = () => {
   }, [theme]);
 
   return (
-    <div onClick={setNextTheme} className={styles.wrapper}>
-      <Moon className={styles.darkTheme} />
-      <Sun className={styles.lightTheme} />
+    <div
+      onClick={setNextTheme}
+      className={styles.wrapper}
+      data-testid="theme-toggler"
+    >
+      <div data-testid="dark" className={styles.darkTheme}>
+        <Moon />
+      </div>
+      <div data-testid="light" className={styles.lightTheme}>
+        <Sun />
+      </div>
     </div>
   );
 };

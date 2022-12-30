@@ -11,7 +11,7 @@ type FormProps = {
 const Form: React.FC<FormProps> = ({ children, onSubmit }) => {
   useKeyListener('Enter', onSubmit);
   return (
-    <div onSubmit={onSubmit} className={styles.wrapper}>
+    <div onSubmit={onSubmit} className={styles.wrapper} data-testid="form">
       {children}
     </div>
   );

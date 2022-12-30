@@ -23,6 +23,7 @@ const Input: React.FC<InputProps> = ({ value, label, onChange }) => {
       className={style.wrapper}
       onFocus={() => dispatch(onFocus())}
       onBlur={() => dispatch(onBlur())}
+      data-testid="input"
     />
   );
 };

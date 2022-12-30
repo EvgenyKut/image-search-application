@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="wrapper"
+      data-testid="greeting"
+    >
+      Good morning!
+    </div>
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;

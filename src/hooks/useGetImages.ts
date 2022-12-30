@@ -56,7 +56,7 @@ const useGetImages = (searchValue: string) => {
     const currentError = error || isRandomDataError;
     if (currentError) {
       const dataGetter = (error: any) => {
-        return error?.data || 'Please, try later =)';
+        return error?.data || 'Please, try later ...';
       };
       dispatch(setErrorNotification(dataGetter(currentError)));
     }

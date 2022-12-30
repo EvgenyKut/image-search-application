@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { SyntheticEvent, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Form, Input, Container } from '../components';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
@@ -15,7 +15,7 @@ const Login = () => {
   const { isAuth } = useAppSelector((state) => state.authReducer);
   const [name, setName] = useState('');
 
-  const handler = (e: any) => {
+  const handler = () => {
     if (name === '') return;
     localStorage.setItem('search-app-name', JSON.stringify(name));
     dispatch(addName({ name: name }));
@@ -32,10 +32,12 @@ const Login = () => {
 
   return (
     <Container>
-      <Form onSubmit={(e: any) => handler(e)}>
+      <Form onSubmit={handler}>
         <Input
           value={name}
-          onChange={(e: any) => setName(e.target.value)}
+          onChange={(e: SyntheticEvent) =>
+            setName((e.target as HTMLTextAreaElement).value)
+          }
           label="Username"
         />
         <Button
