@@ -1,83 +1,69 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Image-Search-Application
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+⚡ npm install /--/ yarn for installing libraries and dependencies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🚀 npm start /--/ yarn start for launch
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+🦉 npm test /--/ yarn test - test runner
 
-### `yarn test`
+Happy hacking!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Main features
 
-### `yarn build`
+### 1. 💯 Local-time greeting 
+It is small feature, but really nice, when you can see something more, than just 'Hello'.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. 💯 Theme provider
+Users can work with our app with comfortable conditions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. 💯 You can change theme by press 'F' on keyboard. 
+Easy way to turn on the flashlight!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. 💯 Random pack of images before first searching
+Get some random images before first search. Your pages always have something!
 
-### `yarn eject`
+### 5. 💯 All images sorted by likes from API Data.
+Get more juicy images first.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 6. 💯 You can change pages by press ⬅️ and ➡️ on keyboard.
+Easy and without useless actions.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 7. 💯 Application preserve user-name, theme and authorization in the Local Storage. 
+Refresh page without any troubles.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 8. 💯 Accessibility
+You can use this app with different theme on the phone and on the laptop as well. Use your keyboard for confirmation your actions.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 🛠️ Technical features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. 💯 Theme provider
+Turning to the CSS Variables approach, you'll notice the only component that re-rendered was our ThemeToggler component responsible for updating the body.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. 💯 RTK-query for communication with API
+It is easy way to communicate with API and this lib inside redux-toolkit. 
+We don't need remember about covering loading/error/update cases. Realy usefull!
 
-Ideas
+### 3. 💯 Custom-hooks
+All logic in one place. Components don't includes state-logic and any side-effects logic.
 
-<!-- Add css theme-provider -->
+### 4. 💯 Type-Script
+TS prevent us from type-mistakes, improve quality of refactoring, decrease quantity of the comments and really useful with team-work.
 
-<!-- Add local-time greeting and theme-provider -->
+### 5. 💯 Unit-tests
+Tests cover some logic in the app. If you or your co-workers will change something and woll broke previous logic, tests will show it. 
+The tests will save our QA efforts for regression testing in the future.
 
-<!-- Add random first images -->
 
-<!-- Add loading -->
+## 💡 Technical ideas for App updating
 
-<!-- Add login store -->
+### 1. 💯 More different tests (e2e)
 
-<!-- Add routing -->
+### 2. 💯 Save some images in the store
 
-Add error-boundaries
+### 3. 💯 Load imgages to the images-bank
 
-<!-- add <Notification /> -->
-
-Fix button sizes
-
-<!-- Add dictionary -->
-
-<!-- add sorting images by like on the page -->
-
-You can switch on light/dark theme by click on icon or press on
-"F"{' '}
-
-</li>
-<li>Use "Enter" for confirmation search your images</li>
-<li>
-For pagination you can use click by buttons or by left/right
-arrows on keyboard
-</li>
-<li>
-If you will refresh the app, we will save your name, theme and
-authorization.
