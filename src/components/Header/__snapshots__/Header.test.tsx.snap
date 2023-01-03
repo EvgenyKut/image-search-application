@@ -11,7 +11,7 @@ exports[`Header snapshot 1`] = `
       className="wrapper"
       data-testid="greeting"
     >
-      Good afternoon!
+      Good morning!
     </div>
     <div>
       test
