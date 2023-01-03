@@ -14,6 +14,22 @@ Happy hacking!
 
 ## Main features
 
+### 1. 💯 Local-time greeting 
+
+### 2. 💯 Theme provider
+
+### 3. 💯 We added possibility change theme by press 'F' on keyboard. 
+
+### 4. 💯 Random pack of images before first searching
+
+### 5. 💯 All images sorted by likes from API Data.
+
+### 6. 💯 You can change pages by ⬅️ and ➡️ on keyboard.
+
+
+
+
+
 
 Ideas
 
