@@ -20,7 +20,7 @@ It is small feature, but really nice, when you can see something more, than just
 ### 2. 💯 Theme provider
 Users can work with our app with comfortable conditions.
 
-### 3. 💯 We added possibility change theme by press 'F' on keyboard. 
+### 3. 💯 You can change theme by press 'F' on keyboard. 
 Easy way to turn on the flashlight!
 
 ### 4. 💯 Random pack of images before first searching
