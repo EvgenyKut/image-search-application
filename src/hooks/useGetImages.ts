@@ -6,6 +6,7 @@ import {
   setErrorNotification,
   setInfoNotification,
 } from '../store/reducers/NotificationsSlice';
+import { changeImagePage } from '../store/reducers/PaginationSlice';
 
 const useGetImages = (searchValue: string) => {
   const dispatch = useAppDispatch();
@@ -43,6 +44,14 @@ const useGetImages = (searchValue: string) => {
     if (!data?.images) return;
     setImagesData(data.images);
   }, [data]);
+
+  useEffect(() => {
+    dispatch(
+      changeImagePage({
+        page: 1,
+      }),
+    );
+  }, [dispatch, searchValue]);
 
   useEffect(() => {
     if (data?.images.length === 0) {
