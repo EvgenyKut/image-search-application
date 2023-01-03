@@ -5,7 +5,9 @@
 In the project directory, you can run:
 
 ⚡ npm install /--/ yarn for installing libraries and dependencies.
+
 🚀 npm start /--/ yarn start for launch
+
 🦉 npm test /--/ yarn test - test runner
 
 Happy hacking!
