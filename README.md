@@ -44,11 +44,11 @@ You can use this app with different theme on the phone and on the laptop as well
 ### 1. 💯 Theme provider
 Turning to the CSS Variables approach, you'll notice the only component that re-rendered was our ThemeToggler component responsible for updating the body.
 
-### 2. 💯 We used RTK-query for communication with API
+### 2. 💯 RTK-query for communication with API
 It is easy way to communicate with API and this lib inside redux-toolkit. 
 We don't need remember about covering loading/error/update cases. Realy usefull!
 
-### 3. 💯 We added some custom-hooks
+### 3. 💯 Custom-hooks
 All logic in one place. Components don't includes state-logic and any side-effects logic.
 
 ### 4. 💯 Type-Script
@@ -61,9 +61,9 @@ The tests will save our QA efforts for regression testing in the future.
 
 ## 💡 Technical ideas for App updating
 
-### 1. 💯 Add some more different tests (e2e)
+### 1. 💯 More different tests (e2e)
 
-### 2. 💯 Add possibility to save some images in the store
+### 2. 💯 Save some images in the store
 
-### 3. 💯 Add possibility to load imgages to the images-bank.
+### 3. 💯 Load imgages to the images-bank
 
