@@ -1,12 +1,13 @@
-import { IImage, IImageRaw } from '../models/IImage';
+import { IImage, IImageRawData } from '../models/IImage';
 
-export const normalizeImages = (images: IImageRaw[]): IImage[] => {
+export const imagesNormalizer = (images: IImageRawData[]): IImage[] => {
   const sortedImages = images.sort((a, b) => b.likes - a.likes);
-  const normalizedImages: IImage[] = sortedImages.map((image: IImageRaw) => ({
-    id: image?.id || 0,
-    url: image?.urls?.small || '',
-    alt: image?.alt_description || '',
-    likes: image?.likes || 0,
-  }));
-  return normalizedImages;
+  return sortedImages.map(({ id, alt_description, likes, urls }) => {
+    return {
+      imageId: id,
+      imageDescription: alt_description,
+      imageLikes: likes,
+      imageUrl: urls.small,
+    };
+  });
 };

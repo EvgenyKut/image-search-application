@@ -3,13 +3,12 @@ import Form from './Form';
 import Greeting from './Greeting';
 import Header from './Header';
 import ImageCard from './ImageCard';
-import Notification from './Notification';
-import PrivateRoute from './AuthRoute';
+import CustomSnackBar from './CustomSnackBar';
 import Spinner from './Spinner';
 import ThemeToggler from './ThemeToggler';
 import Input from './Input';
 import CustomPagination from './CustomPagination';
-import AuthRoute from './AuthRoute';
+import ImagesGrid from './ImagesGrid';
 
 export {
   Container,
@@ -19,9 +18,8 @@ export {
   ImageCard,
   Input,
   CustomPagination,
-  Notification,
-  PrivateRoute,
+  ImagesGrid,
+  CustomSnackBar,
   Spinner,
   ThemeToggler,
-  AuthRoute,
 };

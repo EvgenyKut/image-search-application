@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Form, Input, Container } from '../components';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import { addName } from '../store/reducers/AuthSlice';
-import { setSuccessNotification } from '../store/reducers/NotificationsSlice';
+import { setSuccessSnackBar } from '../store/reducers/SnackbarSlice';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
 import { Dictionary } from '../constants/dictionary';
 import { Routes } from '../constants/routes';
@@ -22,7 +22,7 @@ const Login = () => {
     localStorage.setItem('search-app-name', JSON.stringify(name));
     dispatch(addName({ name: name }));
     dispatch(onBlur());
-    dispatch(setSuccessNotification(`Welcome, ${name}!`));
+    dispatch(setSuccessSnackBar(`Welcome, ${name}!`));
     navigate(Routes.IMAGES);
   };
 

@@ -1,4 +1,4 @@
-import { normalizeImages } from './helper';
+import { imagesNormalizer } from './helper';
 
 const MockImages = [
   {
@@ -48,44 +48,44 @@ const MockImages2 = [
 
 const NormalizedMocImages = [
   {
-    id: 10,
-    url: 'https://images.unsplash.com/photo-1',
-    alt: 'test-image-1',
-    likes: 20,
+    imageId: 10,
+    imageUrl: 'https://images.unsplash.com/photo-1',
+    imageDescription: 'test-image-1',
+    imageLikes: 20,
   },
   {
-    id: 20,
-    url: 'https://images.unsplash.com/photo-2',
-    alt: 'test-image-2',
-    likes: 10,
+    imageId: 20,
+    imageUrl: 'https://images.unsplash.com/photo-2',
+    imageDescription: 'test-image-2',
+    imageLikes: 10,
   },
 ];
 const NormalizedMocImages2 = [
   {
-    id: 20,
-    url: 'https://images.unsplash.com/photo-2',
-    alt: 'test-image-2',
-    likes: 4000,
+    imageId: 20,
+    imageUrl: 'https://images.unsplash.com/photo-2',
+    imageDescription: 'test-image-2',
+    imageLikes: 4000,
   },
   {
-    id: 30,
-    url: 'https://images.unsplash.com/photo-3',
-    alt: 'test-image-3',
-    likes: 2000,
+    imageId: 30,
+    imageUrl: 'https://images.unsplash.com/photo-3',
+    imageDescription: 'test-image-3',
+    imageLikes: 2000,
   },
   {
-    id: 3000,
-    url: 'https://images.unsplash.com/photo-1',
-    alt: 'test-image-1',
-    likes: 100,
+    imageId: 3000,
+    imageUrl: 'https://images.unsplash.com/photo-1',
+    imageDescription: 'test-image-1',
+    imageLikes: 100,
   },
 ];
 
 describe('Normalization data (case 1)', () => {
   test('get normalized data, base case', () => {
-    expect(normalizeImages(MockImages)).toStrictEqual(NormalizedMocImages);
+    expect(imagesNormalizer(MockImages)).toStrictEqual(NormalizedMocImages);
   });
   test('get normalized data (case 2, mixed by likes)', () => {
-    expect(normalizeImages(MockImages2)).toStrictEqual(NormalizedMocImages2);
+    expect(imagesNormalizer(MockImages2)).toStrictEqual(NormalizedMocImages2);
   });
 });

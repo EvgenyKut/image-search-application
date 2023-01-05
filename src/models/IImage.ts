@@ -1,23 +1,31 @@
 export interface IImage {
-  id: number;
-  url: string;
-  alt: string;
-  likes: number;
+  imageId: number;
+  imageUrl: string;
+  imageDescription: string;
+  imageLikes: number;
 }
 
 export interface IImageData {
-  results: IImageRaw[];
+  results: IImageRawData[];
   total: number;
   total_pages: number;
 }
 
-export interface IImageRaw {
+export interface IImageRawData {
   id: number;
+  blur_hash: string;
+  color: string;
+  created_at: string;
   urls: {
     small: string;
+    full: string;
+    raw: string;
+    regular: string;
+    small_s3: string;
   };
   alt_description: string;
   likes: number;
+  views: number;
 }
 
 export type TypeImageFetch = {

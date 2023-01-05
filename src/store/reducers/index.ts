@@ -1,11 +1,6 @@
 import paginationReducer from './PaginationSlice';
 import authReducer from './AuthSlice';
 import searchFocusReducer from './SearchFocusSlice';
-import notificationReducer from './NotificationsSlice';
+import snackBarReducer from './SnackbarSlice';
 
-export {
-  paginationReducer,
-  authReducer,
-  searchFocusReducer,
-  notificationReducer,
-};
+export { paginationReducer, authReducer, searchFocusReducer, snackBarReducer };

@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import Header from './index';
 import * as reactRedux from 'react-redux';
@@ -111,8 +110,6 @@ describe('Header, auth', () => {
 
     const greeting = screen.getByTestId('greeting');
     expect(greeting).toBeInTheDocument();
-    const value = greetingFormatting(userName, new Date().getHours());
-    // expect(greeting.textContent).toBe(value);
 
     const logoutBtn = screen.getByRole('button');
     expect(logoutBtn.textContent).toBe('Logout');

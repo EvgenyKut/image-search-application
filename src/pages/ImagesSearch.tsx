@@ -1,19 +1,10 @@
 import { useState } from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { useAppDispatch, useAppSelector } from '../hooks/redux';
-import { IImage } from '../models/IImage';
 import Spinner from '../components/Spinner';
 import useGetImages from '../hooks/useGetImages';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
-import {
-  CustomPagination,
-  Input,
-  ImageCard,
-  Form,
-  Container,
-} from '../components';
+import { CustomPagination, Input, Form, Container } from '../components';
 import { Dictionary } from '../constants/dictionary';
 import ImagesGrid from '../components/ImagesGrid';
 

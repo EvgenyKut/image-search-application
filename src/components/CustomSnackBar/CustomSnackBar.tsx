@@ -1,35 +1,36 @@
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import { useAppDispatch, useAppSelector } from '../../hooks';
-import { resetNotifications } from '../../store/reducers/NotificationsSlice';
+import { resetSnackBarData } from '../../store/reducers/SnackbarSlice';
 
-const Notification = () => {
+const CustomSnackBar = () => {
   const dispatch = useAppDispatch();
 
-  const { message, type, open } = useAppSelector(
-    (state) => state.notificationReducer,
+  const { notification, type, isOpen } = useAppSelector(
+    (state) => state.snackBarReducer,
   );
 
   const handleClose = () => {
-    dispatch(resetNotifications());
+    dispatch(resetSnackBarData());
   };
 
   return (
     <Snackbar
-      open={open}
-      autoHideDuration={3000}
+      open={isOpen}
+      autoHideDuration={4500}
       onClose={handleClose}
       anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      data-testid="snackbar"
     >
       <Alert
         onClose={handleClose}
         severity={type || 'info'}
         sx={{ width: '100%' }}
       >
-        {message || ''}
+        {notification || ''}
       </Alert>
     </Snackbar>
   );
 };
 
-export default Notification;
+export default CustomSnackBar;

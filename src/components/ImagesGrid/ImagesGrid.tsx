@@ -12,14 +12,20 @@ type ImagesGridProps = {
 const ImagesGrid: React.FC<ImagesGridProps> = ({ imagesData, searchValue }) => {
   return (
     <Box className={styles.boxWrapper}>
-      <Grid container direction="row" justifyContent="center" spacing={3}>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        spacing={3}
+        data-testid="imagesGrid"
+      >
         {imagesData.map((image: IImage) => (
-          <Grid item key={image.id}>
+          <Grid item key={image.imageId}>
             <ImageCard
-              url={image.url}
-              alt={image.alt}
+              url={image.imageUrl}
+              alt={image.imageDescription}
               searchValue={searchValue}
-              likes={image.likes}
+              likes={image.imageLikes}
             />
           </Grid>
         ))}

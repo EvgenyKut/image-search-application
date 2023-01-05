@@ -4,14 +4,14 @@ import {
   paginationReducer,
   authReducer,
   searchFocusReducer,
-  notificationReducer,
+  snackBarReducer,
 } from './reducers';
 
 const rootReducer = combineReducers({
   paginationReducer,
   authReducer,
   searchFocusReducer,
-  notificationReducer,
+  snackBarReducer,
   [imageAPI.reducerPath]: imageAPI.reducer,
 });
 

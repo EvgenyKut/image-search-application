@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
 import { BASE_API_URL, CLIENT_ID } from '../constants/env';
-import { normalizeImages } from './helper';
 import { IData, IImageData, TypeImageFetch } from '../models/IImage';
+import { imagesNormalizer } from './helper';
 
 export const imageAPI = createApi({
   reducerPath: 'imageAPI',
@@ -21,7 +21,7 @@ export const imageAPI = createApi({
         const data = {
           total: response.total,
           total_pages: response.total_pages,
-          images: normalizeImages(response.results),
+          images: imagesNormalizer(response.results),
         };
         return data;
       },
@@ -38,7 +38,7 @@ export const imageAPI = createApi({
         const data = {
           total: response.length,
           total_pages: 1,
-          images: normalizeImages(response),
+          images: imagesNormalizer(response),
         };
         return data;
       },

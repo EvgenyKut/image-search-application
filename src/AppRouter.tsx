@@ -1,13 +1,11 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { Routes as RoutesDictionary } from './constants/routes';
-import Layout from './pages/Layout';
-import Login from './pages/Login';
-import { AuthRoute } from './components';
-import ImagesSearch from './pages/ImagesSearch';
-import Error from './pages/Error';
+import { useAppSelector } from './hooks';
+import { ImagesSearch, Layout, Login, Error } from './pages';
 
 const AppRouter = () => {
+  const { isAuth } = useAppSelector((state) => state.authReducer);
   return (
     <BrowserRouter>
       <Routes>
@@ -15,11 +13,7 @@ const AppRouter = () => {
           <Route index element={<Login />} />
           <Route
             path={RoutesDictionary.IMAGES}
-            element={
-              <AuthRoute baseUrl={RoutesDictionary.HOME}>
-                <ImagesSearch />
-              </AuthRoute>
-            }
+            element={isAuth ? <ImagesSearch /> : <Login />}
           />
           <Route path={RoutesDictionary.OTHER_PAGES} element={<Error />} />
         </Route>

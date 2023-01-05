@@ -3,9 +3,9 @@ import { useAppDispatch, useAppSelector } from './index';
 import { IImage } from '../models/IImage';
 import { imageAPI } from '../services/ImageService';
 import {
-  setErrorNotification,
-  setInfoNotification,
-} from '../store/reducers/NotificationsSlice';
+  setErrorSnackBar,
+  setInfoSnackBar,
+} from '../store/reducers/SnackbarSlice';
 import { changeImagePage } from '../store/reducers/PaginationSlice';
 
 const useGetImages = (searchValue: string) => {
@@ -55,9 +55,7 @@ const useGetImages = (searchValue: string) => {
 
   useEffect(() => {
     if (data?.images.length === 0) {
-      dispatch(
-        setInfoNotification(`No actual photos by search ${searchValue}`),
-      );
+      dispatch(setInfoSnackBar(`No actual photos by search ${searchValue}`));
     }
   }, [data, searchValue, dispatch]);
 
@@ -67,7 +65,7 @@ const useGetImages = (searchValue: string) => {
       const dataGetter = (error: any) => {
         return error?.data || 'Please, try later ...';
       };
-      dispatch(setErrorNotification(dataGetter(currentError)));
+      dispatch(setErrorSnackBar(dataGetter(currentError)));
     }
   }, [error, isRandomDataError, dispatch]);
 

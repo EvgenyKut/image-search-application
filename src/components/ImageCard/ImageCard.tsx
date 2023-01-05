@@ -14,7 +14,7 @@ type ImageCardProps = {
 
 const Image: React.FC<ImageCardProps> = ({ url, alt, searchValue, likes }) => {
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 300 }} data-testid="imageCard">
       <CardMedia component="img" height="300" image={url} alt={alt} />
       <Typography variant="body2" color="text.secondary" align="center">
         {capitalizeFirstLetter(alt || searchValue)}
