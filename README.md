@@ -38,6 +38,8 @@ Refresh page without any troubles.
 ### 8. Accessibility
 You can use this app with different theme on the phone and on the laptop as well. Use your keyboard for confirmation your actions.
 
+### 9. PWA
+You can use this not only in your mobile-browser, but you can save on phone-desctop and use Image searcher like an App!
 
 ## 🛠️ Technical features
 
