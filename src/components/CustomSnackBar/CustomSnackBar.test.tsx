@@ -18,13 +18,6 @@ describe('CustomSnackBar render test', () => {
   const useNavigateMock = useNavigate;
 
   const mockStore = {
-    authReducer: {
-      name: '',
-      isAuth: false,
-    },
-    searchFocusReducer: {
-      focus: false,
-    },
     snackBarReducer: {
       type: 'info',
       notification: 'No actual photos by search test',

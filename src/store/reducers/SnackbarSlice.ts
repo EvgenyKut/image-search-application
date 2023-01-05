@@ -18,7 +18,7 @@ const initialState: SnackBarState = {
 };
 
 export const notificationSlice = createSlice({
-  name: 'notification',
+  name: 'snackBar',
   initialState,
   reducers: {
     resetSnackBarData: (state) => {

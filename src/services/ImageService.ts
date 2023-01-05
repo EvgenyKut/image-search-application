@@ -1,6 +1,11 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
 import { BASE_API_URL, CLIENT_ID } from '../constants/env';
-import { IData, IImageData, TypeImageFetch } from '../models/IImage';
+import {
+  IData,
+  IImageData,
+  IImageRawData,
+  TypeImageFetch,
+} from '../models/IImage';
 import { imagesNormalizer } from './helper';
 
 export const imageAPI = createApi({
@@ -34,7 +39,7 @@ export const imageAPI = createApi({
           client_id: CLIENT_ID,
         },
       }),
-      transformResponse: (response: any) => {
+      transformResponse: (response: IImageRawData[]) => {
         const data = {
           total: response.length,
           total_pages: 1,

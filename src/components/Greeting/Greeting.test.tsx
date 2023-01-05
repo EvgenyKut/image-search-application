@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Greeting from './index';
 import { greetingFormatting } from './helper';

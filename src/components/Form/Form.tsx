@@ -1,6 +1,5 @@
 import React, { SyntheticEvent } from 'react';
 import { useKeyListener } from '../../hooks';
-
 import styles from './form.module.css';
 
 type FormProps = {

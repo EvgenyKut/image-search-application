@@ -5,12 +5,6 @@ import { changeImagePage } from '../../store/reducers/PaginationSlice';
 import styles from './customPagination.module.css';
 import { paginationFormatter } from './helper';
 
-import { Pagination as Pagination2 } from 'antd';
-
-// const App: React.FC = () => <Pagination defaultCurrent={1} total={50} />;
-
-// export default App;
-
 type PaginationProps = {
   totalPages: number;
   page: number;

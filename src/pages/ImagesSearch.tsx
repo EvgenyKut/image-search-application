@@ -4,9 +4,14 @@ import { useAppDispatch, useAppSelector } from '../hooks/redux';
 import Spinner from '../components/Spinner';
 import useGetImages from '../hooks/useGetImages';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
-import { CustomPagination, Input, Form, Container } from '../components';
+import {
+  CustomPagination,
+  Input,
+  Form,
+  Container,
+  ImagesGrid,
+} from '../components';
 import { Dictionary } from '../constants/dictionary';
-import ImagesGrid from '../components/ImagesGrid';
 
 const ImagesSearch = () => {
   const dispatch = useAppDispatch();
