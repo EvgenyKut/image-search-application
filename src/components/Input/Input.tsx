@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({ value, label, onChange }) => {
   return (
     <TextField
       label={label}
-      variant="outlined"
+      variant="standard"
       type="text"
       required
       value={value}

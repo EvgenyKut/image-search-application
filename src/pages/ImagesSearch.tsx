@@ -15,6 +15,7 @@ import {
   Container,
 } from '../components';
 import { Dictionary } from '../constants/dictionary';
+import ImagesGrid from '../components/ImagesGrid';
 
 const ImagesSearch = () => {
   const dispatch = useAppDispatch();
@@ -43,28 +44,15 @@ const ImagesSearch = () => {
             />
             <Button
               onClick={handleSubmit}
-              variant="contained"
+              variant="outlined"
               color="primary"
               type="submit"
+              size="medium"
             >
               {Dictionary.SEARCH_BTN}
             </Button>
           </Form>
-          <Box style={{ minHeight: '630px', marginTop: '1rem' }}>
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-              spacing={2}
-            >
-              {imagesData.map((image: IImage) => (
-                <Grid item xs="auto" sm="auto" md="auto" key={image.id}>
-                  <ImageCard url={image.url} alt={image.alt} />
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
+          <ImagesGrid imagesData={imagesData} searchValue={searchValue} />
           {!!totalPages && (
             <CustomPagination totalPages={totalPages} page={page} />
           )}

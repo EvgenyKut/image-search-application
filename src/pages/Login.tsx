@@ -8,6 +8,7 @@ import { setSuccessNotification } from '../store/reducers/NotificationsSlice';
 import { onBlur } from '../store/reducers/SearchFocusSlice';
 import { Dictionary } from '../constants/dictionary';
 import { Routes } from '../constants/routes';
+import Card from '@mui/material/Card';
 
 const Login = () => {
   const dispatch = useAppDispatch();
@@ -33,23 +34,26 @@ const Login = () => {
 
   return (
     <Container>
-      <Form onSubmit={handler}>
-        <Input
-          value={name}
-          onChange={(e: SyntheticEvent) =>
-            setName((e.target as HTMLTextAreaElement).value)
-          }
-          label={Dictionary.USERNAME_LABEL}
-        />
-        <Button
-          onClick={handler}
-          variant="contained"
-          color="primary"
-          type="submit"
-        >
-          {Dictionary.LOGIN_BTN}
-        </Button>
-      </Form>
+      <Card variant="outlined">
+        <Form onSubmit={handler}>
+          <Input
+            value={name}
+            onChange={(e: SyntheticEvent) =>
+              setName((e.target as HTMLTextAreaElement).value)
+            }
+            label={Dictionary.USERNAME_LABEL}
+          />
+          <Button
+            onClick={handler}
+            variant="outlined"
+            color="primary"
+            type="submit"
+            size="medium"
+          >
+            {Dictionary.LOGIN_BTN}
+          </Button>
+        </Form>
+      </Card>
     </Container>
   );
 };

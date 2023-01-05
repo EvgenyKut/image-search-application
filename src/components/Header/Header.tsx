@@ -28,9 +28,10 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
       {name && (
         <Button
           onClick={logoutHandler}
-          variant="contained"
-          color="primary"
+          variant="outlined"
+          color="info"
           type="button"
+          size="medium"
         >
           {Dictionary.LOGOUT}
         </Button>

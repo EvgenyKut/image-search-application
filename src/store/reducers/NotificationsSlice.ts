@@ -1,21 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface NotificationState {
-  type: NotificationsType;
+  type: NotificationsType | null;
   open: boolean;
   message: string;
 }
 
 enum NotificationsType {
-  NULL = '',
   INFO = 'info',
   SUCCESS = 'success',
-  WARNING = 'warning',
   ERROR = 'error',
 }
 
 const initialState: NotificationState = {
-  type: NotificationsType.NULL,
+  type: null,
   open: false,
   message: '',
 };
@@ -25,7 +23,7 @@ export const notificationSlice = createSlice({
   initialState,
   reducers: {
     resetNotifications: (state) => {
-      state.type = NotificationsType.NULL;
+      state.type = null;
       state.open = false;
       state.message = '';
     },
@@ -44,11 +42,6 @@ export const notificationSlice = createSlice({
       state.open = true;
       state.message = action.payload;
     },
-    setWarningNotification: (state, action: PayloadAction<string>) => {
-      state.type = NotificationsType.WARNING;
-      state.open = true;
-      state.message = action.payload;
-    },
   },
 });
 
@@ -57,6 +50,5 @@ export const {
   setSuccessNotification,
   setErrorNotification,
   setInfoNotification,
-  setWarningNotification,
 } = notificationSlice.actions;
 export default notificationSlice.reducer;

@@ -1,4 +1,3 @@
-import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import Error from './Error';
 import { useNavigate } from 'react-router-dom';
