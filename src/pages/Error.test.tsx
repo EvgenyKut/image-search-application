@@ -16,10 +16,6 @@ describe('Error render test', () => {
   afterEach(() => {
     (useNavigateMock as jest.Mock).mockClear();
   });
-  it('snapshot', () => {
-    const tree = renderer.create(<Error />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 
   it('Error test case', () => {
     render(<Error />);

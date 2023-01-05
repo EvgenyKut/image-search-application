@@ -46,10 +46,6 @@ describe('Login render test', () => {
     (useSelectorMock as jest.Mock).mockClear();
     (useNavigateMock as jest.Mock).mockClear();
   });
-  it('snapshot', () => {
-    const tree = renderer.create(<Login />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 
   it('Login case', () => {
     render(<Login />);

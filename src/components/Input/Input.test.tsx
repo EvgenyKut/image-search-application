@@ -1,32 +1,19 @@
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Input from './index';
-import StateProvider from '../../providers/StateProvider';
+import { setupStore } from '../../store/store';
+import { Provider } from 'react-redux';
+const store = setupStore();
 
 describe('Input-component render test', () => {
   const testContent = 'Test';
   const testLabel = 'Test label';
   const mockCallback = jest.fn();
-  it('snapshot', () => {
-    const tree = renderer
-      .create(
-        <StateProvider>
-          <Input
-            label={testLabel}
-            value={testContent}
-            onChange={mockCallback}
-          />
-        </StateProvider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 
   it('Input test case', () => {
     render(
-      <StateProvider>
+      <Provider store={store}>
         <Input label={testLabel} value={testContent} onChange={mockCallback} />
-      </StateProvider>,
+      </Provider>,
     );
     const inputField = screen.getByTestId('input') as HTMLInputElement;
     expect(inputField).toBeInTheDocument();

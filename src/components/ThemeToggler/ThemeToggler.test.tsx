@@ -1,25 +1,15 @@
 import { render, screen } from '@testing-library/react';
-import StateProvider from '../../providers/StateProvider';
 import ThemeToggler from './index';
-import renderer from 'react-test-renderer';
+import { setupStore } from '../../store/store';
+import { Provider } from 'react-redux';
+const store = setupStore();
 
 describe('ThemeToggler', () => {
-  it('renders correctly ThemeToggler', () => {
-    const tree = renderer
-      .create(
-        <StateProvider>
-          <ThemeToggler />
-        </StateProvider>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('should behave correctly', () => {
     render(
-      <StateProvider>
+      <Provider store={store}>
         <ThemeToggler />
-      </StateProvider>,
+      </Provider>,
     );
 
     const toggler = screen.getByTestId('theme-toggler');

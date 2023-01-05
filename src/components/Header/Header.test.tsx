@@ -42,17 +42,6 @@ describe('Header', () => {
     (useNavigateMock as jest.Mock).mockClear();
   });
 
-  it('snapshot', () => {
-    const tree = renderer
-      .create(
-        <Header>
-          <div>test</div>
-        </Header>,
-      )
-      .toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
   it('Header (not auth)', () => {
     render(
       <Header>

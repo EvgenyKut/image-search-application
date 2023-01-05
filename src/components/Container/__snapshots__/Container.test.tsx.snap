@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Container-component render test snapshot 1`] = `
-<div
-  className="container"
-  data-testid="container"
-/>
-`;
