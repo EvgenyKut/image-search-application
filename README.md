@@ -64,7 +64,7 @@ The tests will save our QA efforts for regression testing in the future.
 
 ## 💡 Technical ideas for App updating
 
-### 1. More different tests (e2e)
+### 1. More different tests (unit,e2e)
 
 ### 2. Save some images in the store
 
