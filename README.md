@@ -14,32 +14,33 @@ Happy hacking!
 
 ## 📌 Main features
 
-### 1. Local-time greeting 
+### 1. PWA
+You can use our Web-Application not only in your mobile-browser, but you can save on phone-desktop and use Image search like an App!
+
+### 2. Local-time greeting 
 It is small feature, but really nice, when you can see something more, than just 'Hello'.
 
-### 2. Theme provider
+### 3. Theme provider
 Users can work with our app with comfortable conditions.
 
-### 3. You can change theme by press 'F' on keyboard. 
+### 4. You can change theme by press 'F' on keyboard. 
 Easy way to turn on the flashlight!
 
-### 4. Random pack of images before first searching
+### 5. Random pack of images before first searching
 Get some random images before first search. Your pages always have something!
 
-### 5. All images sorted by likes from API Data.
+### 6. All images sorted by likes from API Data.
 Get more juicy images first.
 
-### 6. You can change pages by press ⬅️ and ➡️ on keyboard.
+### 7. You can change pages by press ⬅️ and ➡️ on keyboard.
 Easy and without useless actions.
 
-### 7. Application preserve user-name, theme and authorization in the Local Storage. 
+### 8. Application preserve user-name, theme and authorization in the Local Storage. 
 Refresh page without any troubles.
 
-### 8. Accessibility
+### 9. Accessibility
 You can use this app with different theme on the phone and on the laptop as well. Use your keyboard for confirmation your actions.
 
-### 9. PWA
-You can use this not only in your mobile-browser, but you can save on phone-desctop and use Image searcher like an App!
 
 ## 🛠️ Technical features
 
