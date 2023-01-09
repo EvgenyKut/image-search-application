@@ -1,7 +1,7 @@
 body[data-theme='dark'] .wrapper {
   margin-top: 1rem;
   padding: 0.5rem;
-  background-color: lightblue !important;
+  background-color: var(--accentColor) !important;
   border-radius: 8px;
   filter: brightness(1.1);
 }
