@@ -1,7 +1,3 @@
-.circularProgress {
-  color: inherit;
-}
-
 .backDrop {
-  color: var(---whiteColor);
+  color: var(--whiteColor);
 }
