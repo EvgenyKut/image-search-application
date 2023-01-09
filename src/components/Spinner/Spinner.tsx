@@ -6,7 +6,7 @@ import styles from './spinner.module.css';
 const Spinner = () => {
   return (
     <Backdrop open data-testid="spinner" className={styles.backDrop}>
-      <CircularProgress className={styles.circularProgress} />
+      <CircularProgress color="inherit" />
     </Backdrop>
   );
 };
