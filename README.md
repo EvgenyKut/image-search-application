@@ -58,7 +58,7 @@ All logic in one place. Components don't includes state-logic and any side-effec
 TS prevent us from type-mistakes, improve quality of refactoring, decrease quantity of the comments and really useful with team-work.
 
 ### 5. Unit-tests
-Tests cover some logic in the app. If you or your co-workers will change something and woll broke previous logic, tests will show it. 
+Tests cover some logic in the app. If you or your co-workers will change something and will broke previous logic, tests will show it. 
 The tests will save our QA efforts for regression testing in the future.
 
 
